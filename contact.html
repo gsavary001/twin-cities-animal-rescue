@@ -6,6 +6,7 @@
   <meta name="description" content="Tell us if you want to volunteer, foster, or learn about adoption.">
   <title>Twin Cities Animal Rescue | Contact</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
@@ -26,20 +27,24 @@
     <section>
       <h2>Volunteer or Foster Interest Form</h2>
       <p>Fill out this form and a team member will contact you. Fields marked with an asterisk (*) are required.</p>
-      <form action="#" method="post">
+      <p id="saved-summary" class="saved-summary" hidden></p>
+      <form id="interest-form" action="#" method="post" novalidate>
         <fieldset>
           <legend>Your Contact Information</legend>
           <p>
             <label for="name">Full name *</label><br>
             <input type="text" id="name" name="name" required minlength="2" maxlength="60">
+            <span class="error" id="name-error" aria-live="polite"></span>
           </p>
           <p>
             <label for="email">Email address *</label><br>
             <input type="email" id="email" name="email" required>
+            <span class="error" id="email-error" aria-live="polite"></span>
           </p>
           <p>
             <label for="phone">Phone number (optional, format 555-123-4567)</label><br>
             <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="555-123-4567">
+            <span class="error" id="phone-error" aria-live="polite"></span>
           </p>
         </fieldset>
 
@@ -53,6 +58,7 @@
               <option value="foster">Foster</option>
               <option value="adoption">Adoption information</option>
             </select>
+            <span class="error" id="interest-error" aria-live="polite"></span>
           </p>
           <p>
             <label for="availability">Availability *</label><br>
@@ -63,6 +69,7 @@
               <option value="evenings">Evenings</option>
               <option value="flexible">Flexible</option>
             </select>
+            <span class="error" id="availability-error" aria-live="polite"></span>
           </p>
           <p>
             <label for="experience">Experience with pets *</label><br>
@@ -72,14 +79,17 @@
               <option value="some">Some experience</option>
               <option value="lots">A lot of experience</option>
             </select>
+            <span class="error" id="experience-error" aria-live="polite"></span>
           </p>
           <p>
             <label for="message">Short message</label><br>
             <textarea id="message" name="message" rows="4" cols="40" maxlength="500"></textarea>
+            <span class="error" id="message-error" aria-live="polite"></span>
           </p>
         </fieldset>
 
         <p><button type="submit">Send My Interest</button></p>
+        <p id="form-status" class="form-status" role="status" aria-live="polite" tabindex="-1"></p>
       </form>
     </section>
 

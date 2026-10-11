@@ -332,3 +332,77 @@ footer a {
     max-width: 40rem;
   }
 }
+
+/* ---------- Interactive features (Touchstone 4) ---------- */
+.saved-panel {
+  margin: 1rem 0 1.5rem;
+  padding: 1rem;
+  background-color: #F6FBF9;
+  border: 2px solid #0F5C4D;
+  border-radius: 12px;
+}
+
+.saved-panel ul {
+  margin: 0.5rem 0;
+}
+
+.saved-panel p {
+  margin: 0.5rem 0;
+}
+
+.save-role {
+  margin-top: 0.75rem;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  color: #0F5C4D;
+  background-color: #FFFFFF;
+  border: 2px solid #0F5C4D;
+}
+
+.save-role.saved {
+  color: #F6FBF9;
+  background-color: #0F5C4D;
+}
+
+button.secondary {
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #0F5C4D;
+  background-color: #FFFFFF;
+}
+
+.saved-summary {
+  padding: 0.75rem 1rem;
+  background-color: #F6FBF9;
+  border-left: 6px solid #26DBAC;
+  border-radius: 8px;
+}
+
+.error {
+  display: block;
+  min-height: 0;
+  margin-top: 0.3rem;
+  font-weight: bold;
+  color: #8B1A1A;
+}
+
+.error:not(:empty)::before {
+  content: "\26A0  ";
+}
+
+input[aria-invalid="true"],
+select[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border-color: #8B1A1A;
+  border-width: 3px;
+}
+
+.form-status {
+  font-weight: bold;
+  color: #0F5C4D;
+}
+
+.form-status.has-errors {
+  color: #8B1A1A;
+}

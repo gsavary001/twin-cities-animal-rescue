@@ -6,6 +6,7 @@
   <meta name="description" content="Learn about our adoption process, foster program, and volunteer roles.">
   <title>Twin Cities Animal Rescue | Services</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
@@ -51,23 +52,38 @@
 
     <section>
       <h2>Volunteer Roles</h2>
+      <p>Find the roles that fit your schedule. Select <strong>Save this role</strong> and we will remember your choices on this device and carry them to the volunteer form.</p>
+      <div id="saved-panel" class="saved-panel">
+        <h3>My Saved Roles</h3>
+        <p id="saved-empty">You have not saved any roles yet.</p>
+        <ul id="saved-list"></ul>
+        <p id="saved-message" role="status" aria-live="polite"></p>
+        <p>
+          <a id="saved-form-link" href="contact.html" hidden>Continue to the volunteer form</a>
+          <button type="button" id="clear-saved" class="secondary" hidden>Clear my saved roles</button>
+        </p>
+      </div>
       <img src="rescue-volunteer_c.png" alt="A volunteer in a white VOLUNTEER shirt kneeling beside a friendly brown dog and holding its paw" width="300">
       <div class="cards">
         <div class="card">
           <h3>Animal Care Volunteer</h3>
-          <p>Feed, walk, and play with animals at the rescue.</p>
+          <p>Feed, walk, and play with animals at the rescue. About 3 hours a week.</p>
+          <button type="button" class="save-role" data-role="animal-care" aria-pressed="false">Save this role</button>
         </div>
         <div class="card">
           <h3>Adoption Event Helper</h3>
-          <p>Greet visitors and help families meet adoptable pets at weekend events.</p>
+          <p>Greet visitors and help families meet adoptable pets at weekend events. About 4 hours on a weekend.</p>
+          <button type="button" class="save-role" data-role="event-helper" aria-pressed="false">Save this role</button>
         </div>
         <div class="card">
           <h3>Transport Driver</h3>
-          <p>Drive animals to veterinary appointments or foster homes.</p>
+          <p>Drive animals to veterinary appointments or foster homes. About 2 hours per trip.</p>
+          <button type="button" class="save-role" data-role="transport-driver" aria-pressed="false">Save this role</button>
         </div>
         <div class="card">
           <h3>Office and Outreach Helper</h3>
-          <p>Answer emails, share our message online, and help with fundraising.</p>
+          <p>Answer emails, share our message online, and help with fundraising. About 2 hours a week.</p>
+          <button type="button" class="save-role" data-role="office-outreach" aria-pressed="false">Save this role</button>
         </div>
       </div>
     </section>
